@@ -8,64 +8,58 @@ import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
 import com.aqa.api.models.UserRegisterDto;
+import com.aqa.api.models.clients.UserClient;
 import com.aqa.utils.TestDataGenerator;
 import org.hamcrest.Matchers;
 
-import io.restassured.RestAssured;
-import io.restassured.http.ContentType;
+import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 
+@Epic("Управление пользователями")
+@Feature("Регистрация")
 public class RegisterTest extends BaseTest {
     
     @Test
+    @Story("Успешная регистрация")
+    @Description("Проверка того, что пользователь может успешно зарегистрироваться с валидными данными")
     public void registerUserShouldReturnCode201() {
-        RestAssured
-            .given()
-                .contentType(ContentType.JSON)
-                .body(TestDataGenerator.generateRandomUser())
-            .when()
-                .post("/users")
-            .then()
-                .log().all()
-                .statusCode(201);        
+        var client = new UserClient();
+        client.register(TestDataGenerator.generateRandomUser())
+        .then()
+            .log().all()
+            .statusCode(201);        
     }
 
     @Test
+    @Story("Негативные сценарии регистрации")
+    @Description("Проверка повторной регистрации")
     public void registerDublicateUserShouldFail() {
         var user = TestDataGenerator.generateRandomUser();
-        RestAssured
-            .given()
-                .contentType(ContentType.JSON)
-                .body(user)
-            .when()
-                .post("/users")
-            .then()
-                .log().all()
-                .statusCode(201); 
+        var client = new UserClient();
+        client.register(user)
+        .then()
+            .log().all()
+            .statusCode(201);
         
-        RestAssured
-            .given()
-                .contentType(ContentType.JSON)
-                .body(user)
-            .when()
-                .post("/users")
-            .then()
-                .log().all()
-                .statusCode(422);         
+        client.register(user)
+        .then()
+            .log().all()
+            .statusCode(422);       
     }
     
     @ParameterizedTest(name = "Регистрация должна падать, если {0}")
     @MethodSource("getInvalidUsers")
+    @Story("Негативные сценарии регистрации")
+    @Description("Проверка валидации полей при регистрации с пустыми данными")
     public void registerUserWithEmptyFieldShouldFail(String testName, UserRegisterDto invalidUser, String errorField, String expectedError) {
-        RestAssured
-            .given()
-                .contentType(ContentType.JSON)
-                .body(invalidUser)
-            .when()
-                .post("/users")
-            .then()
-                .log().all()
-                .statusCode(422)
-                .body("errors." + errorField, Matchers.hasItem(expectedError)); 
+        var client = new UserClient();
+        client.register(invalidUser)
+        .then()
+            .log().all()
+            .statusCode(422) 
+            .body("errors." + errorField, Matchers.hasItem(expectedError)); 
     }
 
     private static Stream<Arguments> getInvalidUsers() {

@@ -10,3 +10,4 @@ Thumbs.db
 backend-src/
 
 .allure/
+allure-results/
