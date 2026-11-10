@@ -1,0 +1,10 @@
+target/
+*.log
+
+.vscode/
+.factorypath
+
+.DS_Store
+Thumbs.db
+
+backend-src/
