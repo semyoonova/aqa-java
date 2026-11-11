@@ -1,4 +1,4 @@
-package com.aqa.api.models.clients;
+package com.aqa.api.clients;
 
 import com.aqa.api.models.CreateArticleDto;
 import io.restassured.http.ContentType;
@@ -12,6 +12,16 @@ public class ArticleClient {
             .header("Authorization", "Token " + token) 
             .body(articleDto)
         .when()
+            .log().all()
             .post("/articles");
+    }
+
+    public Response getArticlesByAuthor(String token, String author) {
+        return given()
+            .header("Authorization", "Token " + token) 
+            .param("author", author)
+        .when()
+            .log().all()
+            .get("/articles");
     }
 }

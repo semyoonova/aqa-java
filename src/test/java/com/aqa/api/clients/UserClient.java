@@ -1,4 +1,4 @@
-package com.aqa.api.models.clients;
+package com.aqa.api.clients;
 
 import com.aqa.api.models.UserLoginDto;
 import com.aqa.api.models.UserRegisterDto;

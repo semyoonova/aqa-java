@@ -2,8 +2,9 @@ package com.aqa.utils;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
-import java.util.Random;
+import java.util.Set;
 
 import com.aqa.api.models.CreateArticleDto;
 import com.aqa.api.models.UserRegisterDto;
@@ -23,17 +24,18 @@ public class TestDataGenerator {
     } 
 
     public static CreateArticleDto generateRandomArticle() {
-        var tags = new ArrayList<>(List.of("java", "aqa", "testing", "faker"));
+        var tags = new ArrayList<>(List.of("#java", "#aqa", "#testing", "#faker"));
         Collections.shuffle(tags);
-        ArrayList<String> arrayTags = new ArrayList<>();
-        arrayTags.add(tags.get(0));
-        arrayTags.add(tags.get(1));
+        Set<String> uniqueTags = Set.of(
+            "#" + faker.lorem().word() + System.nanoTime(),
+            "#" + faker.lorem().word() + System.nanoTime()
+        );
 
         CreateArticleDto.Article articleFields = new CreateArticleDto.Article(
             faker.lorem().sentence(5),
             faker.lorem().sentence(10),
             faker.lorem().paragraph(10),
-            arrayTags
+            uniqueTags
         );
         return new CreateArticleDto(articleFields);
     }

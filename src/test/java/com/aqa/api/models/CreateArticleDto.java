@@ -1,6 +1,8 @@
 package com.aqa.api.models;
 
-import java.util.ArrayList;
+import java.util.Set;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -16,10 +18,11 @@ public class CreateArticleDto {
     @Data
     @AllArgsConstructor 
     @NoArgsConstructor 
+    @JsonIgnoreProperties(ignoreUnknown = true)
     public static class Article {
         private String title;
         private String description;
         private String body;
-        private ArrayList<String> tagList;
+        private Set<String> tagList;
     }
 }

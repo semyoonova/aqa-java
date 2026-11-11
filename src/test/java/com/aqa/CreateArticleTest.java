@@ -1,9 +1,10 @@
 package com.aqa;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import com.aqa.api.clients.ArticleClient;
+import com.aqa.api.clients.UserClient;
 import com.aqa.api.models.UserLoginDto;
-import com.aqa.api.models.clients.ArticleClient;
-import com.aqa.api.models.clients.UserClient;
 import com.aqa.utils.TestDataGenerator;
 
 import io.qameta.allure.Description;

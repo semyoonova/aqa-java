@@ -7,8 +7,8 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
+import com.aqa.api.clients.UserClient;
 import com.aqa.api.models.UserRegisterDto;
-import com.aqa.api.models.clients.UserClient;
 import com.aqa.utils.TestDataGenerator;
 import org.hamcrest.Matchers;
 
