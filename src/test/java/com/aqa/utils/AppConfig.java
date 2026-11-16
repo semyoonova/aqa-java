@@ -16,4 +16,13 @@ public interface AppConfig extends Config {
 
     @Key("remote.api.base.url")
     String remoteApiBaseUrl();
+
+    @Key("db.url")
+    String dbUrl();
+
+    @Key("db.user")
+    String dbUser();
+
+    @Key("db.password")
+    String dbPassword();
 } 

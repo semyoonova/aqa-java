@@ -13,3 +13,5 @@ backend-src/
 allure-results/
 
 build/
+
+db-data/

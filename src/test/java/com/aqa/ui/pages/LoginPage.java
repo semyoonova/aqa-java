@@ -12,7 +12,6 @@ public class LoginPage extends BasePage<LoginPage> {
     private final SelenideElement emailInput = $("input[formcontrolname='email']");
     private final SelenideElement passwordInput = $("input[formcontrolname='password']");
     private final SelenideElement submitButton = $("button[type='submit']");
-    //TODO: поправить локатор 
     private final SelenideElement errorList = $("app-list-errors");
 
     public LoginPage login(String email, String password) {

@@ -5,3 +5,9 @@ services:
     container_name: conduit-backend
     ports:
       - "8080:8080"
+    volumes:
+      - ./db-data:/data
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:h2:file:/data/testdb;DB_CLOSE_ON_EXIT=FALSE
+      - SPRING_DATASOURCE_USERNAME=sa
+      - SPRING_DATASOURCE_PASSWORD=password
