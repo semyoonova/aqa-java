@@ -22,7 +22,7 @@ public class DbHelper {
                         StandardCopyOption.REPLACE_EXISTING
                     );
         } catch (IOException ioE) {
-            throw new RuntimeException("Ошибка при запросе к БД" + e.getMessage() , ioE);
+            throw new RuntimeException("Ошибка при запросе к БД" + ioE.getMessage() , ioE);
         } 
         try (Connection conn = DriverManager.getConnection(CONFIG.dbUrl(), CONFIG.dbUser(), CONFIG.dbPassword());
             PreparedStatement stmt = conn.prepareStatement(sql)) {
@@ -49,7 +49,7 @@ public class DbHelper {
                         StandardCopyOption.REPLACE_EXISTING
                     );
         } catch (IOException ioE) {
-            throw new RuntimeException("Ошибка при запросе к БД" + e.getMessage() , ioE);
+            throw new RuntimeException("Ошибка при запросе к БД" + ioE.getMessage() , ioE);
         } 
         try (Connection conn = DriverManager.getConnection(CONFIG.dbUrl(), CONFIG.dbUser(), CONFIG.dbPassword());
             PreparedStatement stmt = conn.prepareStatement(sql)) {
