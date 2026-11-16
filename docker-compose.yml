@@ -11,3 +11,4 @@ services:
       - SPRING_DATASOURCE_URL=jdbc:h2:file:/data/testdb;DB_CLOSE_ON_EXIT=FALSE
       - SPRING_DATASOURCE_USERNAME=sa
       - SPRING_DATASOURCE_PASSWORD=password
+      - SPRING_DATASOURCE_URL=jdbc:h2:file:/data/testdb;DB_CLOSE_ON_EXIT=FALSE;WRITE_DELAY=0

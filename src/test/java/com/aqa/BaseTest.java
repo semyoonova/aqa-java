@@ -16,6 +16,7 @@ public class BaseTest {
         Configuration.browser = "chrome";
         Configuration.browserSize = "1920x1080";
         Configuration.timeout = 5000; 
+        Configuration.headless = true;
     }
 }
 
