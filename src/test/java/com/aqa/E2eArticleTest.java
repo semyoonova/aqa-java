@@ -1,5 +1,7 @@
 package com.aqa;
 
+import java.io.IOException;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -55,7 +57,7 @@ public class E2eArticleTest extends BaseTest{
     }
 
     @Test
-    public void registeredUserAndCreatedArticleShouldBeInsertedIntoDB() {
+    public void registeredUserAndCreatedArticleShouldBeInsertedIntoDB() throws IOException {
         var userClient = new UserClient();
         var articleClient = new ArticleClient();
         UserRegisterDto user = TestDataGenerator.generateRandomUser();
