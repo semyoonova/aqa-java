@@ -19,8 +19,10 @@ public class DbHelper {
             if (rs.next()) {
                 return rs.getInt(1) > 0;
             }
+
+            
         } catch (SQLException e) {
-            throw new RuntimeException("Ошибка при запросе к БД", e);
+            throw new RuntimeException("Ошибка при запросе к БД" + e.getMessage() , e);
         }
         return false;
     }
@@ -36,7 +38,7 @@ public class DbHelper {
                 return rs.getInt(1) > 0;
             }
         } catch (SQLException e) {
-            throw new RuntimeException("Ошибка при запросе к БД", e);
+            throw new RuntimeException("Ошибка при запросе к БД" + e.getMessage(), e);
         }
         return false;
     }

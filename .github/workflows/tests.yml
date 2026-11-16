@@ -22,7 +22,15 @@ jobs:
           cache: 'maven'
 
       - name: Set up docker
-        run: docker compose up -d
+        run: |
+          mkdir -p db-data
+          chmod 777 db-data
+          docker compose up -d
+
+      - name: wait for DB
+        run: |
+          sleep 15
+          sudo chmod -R 777 db-data
 
       - name: wait for DB
         run: sleep 15

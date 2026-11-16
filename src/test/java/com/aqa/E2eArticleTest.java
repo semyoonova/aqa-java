@@ -77,7 +77,7 @@ public class E2eArticleTest extends BaseTest{
         .then()
             .statusCode(200);
         
-        var responseArticle = articleClient.getArticlesByAuthor(token, user.getUser().getUsername())
+        articleClient.getArticlesByAuthor(token, user.getUser().getUsername())
         .then()
             .statusCode(200)
             .log().body()
