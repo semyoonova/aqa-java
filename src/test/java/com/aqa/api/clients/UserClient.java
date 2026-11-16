@@ -6,11 +6,23 @@ import com.aqa.api.models.UserRegisterDto;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import static io.restassured.RestAssured.given;
+import static com.aqa.utils.AppConfig.CONFIG;
 
 public class UserClient {
+
+    private final String baseUrl;
+
+    public UserClient() {
+        baseUrl = CONFIG.apiBaseUrl();
+    }
+
+    public UserClient(String baseUrl) {
+        this.baseUrl = baseUrl;
+    }
     
     public Response register(UserRegisterDto userDto) {
         return given()
+            .baseUri(baseUrl)
             .contentType(ContentType.JSON)
             .body(userDto)
         .when()
@@ -19,6 +31,7 @@ public class UserClient {
 
     public Response login(UserLoginDto loginDto) {
         return given()
+            .baseUri(baseUrl)
             .contentType(ContentType.JSON)
             .body(loginDto)
         .when()

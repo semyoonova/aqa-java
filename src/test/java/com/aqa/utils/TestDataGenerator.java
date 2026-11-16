@@ -24,9 +24,7 @@ public class TestDataGenerator {
     } 
 
     public static CreateArticleDto generateRandomArticle() {
-        var tags = new ArrayList<>(List.of("#java", "#aqa", "#testing", "#faker"));
-        Collections.shuffle(tags);
-        Set<String> uniqueTags = Set.of(
+        Set<String> tags = Set.of(
             "#" + faker.lorem().word() + System.nanoTime(),
             "#" + faker.lorem().word() + System.nanoTime()
         );
@@ -35,7 +33,7 @@ public class TestDataGenerator {
             faker.lorem().sentence(5),
             faker.lorem().sentence(10),
             faker.lorem().paragraph(10),
-            uniqueTags
+            tags
         );
         return new CreateArticleDto(articleFields);
     }

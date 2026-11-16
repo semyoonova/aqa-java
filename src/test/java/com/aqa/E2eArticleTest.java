@@ -1,7 +1,5 @@
 package com.aqa;
 
-import static org.junit.jupiter.api.Assertions.assertAll;
-
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -40,8 +38,8 @@ public class E2eArticleTest extends BaseTest{
             .statusCode(200)
             .log().body()
             .extract()
-            .jsonPath()
-            .getObject("articles[0]", CreateArticleDto.Article.class);
+                .jsonPath()
+                .getObject("articles[0]", CreateArticleDto.Article.class);
         
         
         Assertions.assertAll( () ->
@@ -49,7 +47,7 @@ public class E2eArticleTest extends BaseTest{
                 Assertions.assertEquals(article.getArticle().getTitle(), responseArticle.getTitle());
                 Assertions.assertEquals(article.getArticle().getDescription(), responseArticle.getDescription());
                 Assertions.assertEquals(article.getArticle().getBody(), responseArticle.getBody());
-                // TODO: теги сохраняются нестабильно, возвращается 0 или 1 тег, возможно из-за задержки записи в БД
+                // TODO: дефект: только уникальные теги приходят в get запросе, возможно нужна задержка 
                 Assertions.assertEquals(article.getArticle().getTagList(), responseArticle.getTagList());
             }
         );

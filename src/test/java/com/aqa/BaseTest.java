@@ -3,14 +3,15 @@ package com.aqa;
 import com.codeborne.selenide.Configuration;
 import io.restassured.RestAssured;
 import org.junit.jupiter.api.BeforeAll;
+import static com.aqa.utils.AppConfig.CONFIG;
+
 
 public class BaseTest {
 
     @BeforeAll
     public static void setup() {
-        RestAssured.baseURI = "http://localhost:8080";
-
-       Configuration.baseUrl = "http://localhost:8080"; 
+        RestAssured.baseURI = CONFIG.apiBaseUrl();
+        Configuration.baseUrl = CONFIG.uiBaseUrl();
         
         Configuration.browser = "chrome";
         Configuration.browserSize = "1920x1080";

@@ -11,3 +11,5 @@ backend-src/
 
 .allure/
 allure-results/
+
+build/
