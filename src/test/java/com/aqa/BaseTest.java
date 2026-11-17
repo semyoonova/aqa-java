@@ -17,6 +17,12 @@ public class BaseTest {
         Configuration.browserSize = "1920x1080";
         Configuration.timeout = 5000; 
         Configuration.headless = true;
+
+        RestAssured.filters(new AllureRestAssured());
+
+        SelenideLogger.addListener("AllureSelenide", new AllureSelenide()
+            .screenshots(true)
+            .savePageSource(false));
     }
 }
 
