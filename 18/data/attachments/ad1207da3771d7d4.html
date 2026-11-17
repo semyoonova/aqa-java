@@ -1,0 +1,32 @@
+<div>POST to https://conduit-api.bondaracademy.com/api/users</div>
+
+<h4>Body</h4>
+<div>
+    <pre class="preformated-text">
+{
+    &quot;user&quot;: {
+        &quot;username&quot;: &quot;rochelle.hirthe&quot;,
+        &quot;email&quot;: &quot;marisol.gibson@yahoo.com&quot;,
+        &quot;password&quot;: &quot;H#!@fQwkdWVHCV&quot;
+    }
+}    </pre>
+</div>
+
+<h4>Headers</h4>
+<div>
+        <div>Accept: */*</div>
+        <div>Content-Type: application/json</div>
+</div>
+
+
+
+<h4>Curl</h4>
+<div>
+curl -v -X POST &#39;https://conduit-api.bondaracademy.com/api/users&#39; -H &#39;Accept: */*&#39; -H &#39;Content-Type: application/json&#39; -d &#39;{
+    &quot;user&quot;: {
+        &quot;username&quot;: &quot;rochelle.hirthe&quot;,
+        &quot;email&quot;: &quot;marisol.gibson@yahoo.com&quot;,
+        &quot;password&quot;: &quot;H#!@fQwkdWVHCV&quot;
+    }
+}&#39;
+</div>

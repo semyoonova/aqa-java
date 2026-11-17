@@ -1,0 +1,41 @@
+<div>POST to http://localhost:8080/articles</div>
+
+<h4>Body</h4>
+<div>
+    <pre class="preformated-text">
+{
+    &quot;article&quot;: {
+        &quot;title&quot;: &quot;Cum et at eum assumenda.&quot;,
+        &quot;description&quot;: &quot;Totam voluptas nihil temporibus repellat molestiae distinctio accusamus tempora dolore expedita.&quot;,
+        &quot;body&quot;: &quot;Officiis voluptas ad. Est aut doloribus. Aspernatur sunt ullam culpa occaecati consequatur quas. In alias enim dolor accusantium consequuntur aut. Et nihil totam et distinctio illo error. Occaecati minus vitae qui est facilis. Saepe reiciendis ipsum velit perspiciatis. Sequi ratione provident atque quo. Ex qui inventore et enim quasi et quo. Fugiat impedit nam provident. Unde id molestias ea suscipit.&quot;,
+        &quot;tagList&quot;: [
+            &quot;#vel113271686595&quot;,
+            &quot;#nulla113271711739&quot;
+        ]
+    }
+}    </pre>
+</div>
+
+<h4>Headers</h4>
+<div>
+        <div>Authorization: Token eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI0Y2MxYTFmOC1hZDc5LTRlN2EtYTM3Ny02NzZkZWFhMDVlZTUiLCJleHAiOjE3OTUwMjQ4MTl9._LB_ZC0y0y4i7Y4U0LrJv3_rhaZxbvZ1akHpjB8kr8H48moGKo2adpROTVAhGqzD21hm9gmJD6FRAIY77xtxGw</div>
+        <div>Accept: */*</div>
+        <div>Content-Type: application/json</div>
+</div>
+
+
+
+<h4>Curl</h4>
+<div>
+curl -v -X POST &#39;http://localhost:8080/articles&#39; -H &#39;Authorization: Token eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI0Y2MxYTFmOC1hZDc5LTRlN2EtYTM3Ny02NzZkZWFhMDVlZTUiLCJleHAiOjE3OTUwMjQ4MTl9._LB_ZC0y0y4i7Y4U0LrJv3_rhaZxbvZ1akHpjB8kr8H48moGKo2adpROTVAhGqzD21hm9gmJD6FRAIY77xtxGw&#39; -H &#39;Accept: */*&#39; -H &#39;Content-Type: application/json&#39; -d &#39;{
+    &quot;article&quot;: {
+        &quot;title&quot;: &quot;Cum et at eum assumenda.&quot;,
+        &quot;description&quot;: &quot;Totam voluptas nihil temporibus repellat molestiae distinctio accusamus tempora dolore expedita.&quot;,
+        &quot;body&quot;: &quot;Officiis voluptas ad. Est aut doloribus. Aspernatur sunt ullam culpa occaecati consequatur quas. In alias enim dolor accusantium consequuntur aut. Et nihil totam et distinctio illo error. Occaecati minus vitae qui est facilis. Saepe reiciendis ipsum velit perspiciatis. Sequi ratione provident atque quo. Ex qui inventore et enim quasi et quo. Fugiat impedit nam provident. Unde id molestias ea suscipit.&quot;,
+        &quot;tagList&quot;: [
+            &quot;#vel113271686595&quot;,
+            &quot;#nulla113271711739&quot;
+        ]
+    }
+}&#39;
+</div>

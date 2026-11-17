@@ -1,0 +1,41 @@
+<div>POST to http://localhost:8080/articles</div>
+
+<h4>Body</h4>
+<div>
+    <pre class="preformated-text">
+{
+    &quot;article&quot;: {
+        &quot;title&quot;: &quot;Minus alias provident deleniti sed eum id temporibus.&quot;,
+        &quot;description&quot;: &quot;Aut dolor rerum quia debitis qui et non nobis ut veniam.&quot;,
+        &quot;body&quot;: &quot;Quia molestiae ut magni eos. Laborum et ratione odit. Qui quam aspernatur. Dolorem esse impedit vel amet fugit et. Labore explicabo est ut. Libero quisquam aut non dolores voluptate. Nihil ratione porro eos numquam. Impedit voluptas et dolorum quis sit. Officia perspiciatis eum quis. Excepturi reprehenderit deleniti in consequuntur qui autem.&quot;,
+        &quot;tagList&quot;: [
+            &quot;#exercitationem112583808608&quot;,
+            &quot;#reprehenderit112585744456&quot;
+        ]
+    }
+}    </pre>
+</div>
+
+<h4>Headers</h4>
+<div>
+        <div>Authorization: Token eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI4OGYwNDRjNi03MDkzLTRlMWYtODViZC05Yjc3NjVjODM5MTAiLCJleHAiOjE3OTUwMjQ4MTh9.YVZOZn1RgpcpIaYggFGclaK9Z59em6wQGoELBpkCbaTSS5ggOVLedNlBlrcnzNYoM3Ov3MJIABO-8vZtaPshiA</div>
+        <div>Accept: */*</div>
+        <div>Content-Type: application/json</div>
+</div>
+
+
+
+<h4>Curl</h4>
+<div>
+curl -v -X POST &#39;http://localhost:8080/articles&#39; -H &#39;Authorization: Token eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI4OGYwNDRjNi03MDkzLTRlMWYtODViZC05Yjc3NjVjODM5MTAiLCJleHAiOjE3OTUwMjQ4MTh9.YVZOZn1RgpcpIaYggFGclaK9Z59em6wQGoELBpkCbaTSS5ggOVLedNlBlrcnzNYoM3Ov3MJIABO-8vZtaPshiA&#39; -H &#39;Accept: */*&#39; -H &#39;Content-Type: application/json&#39; -d &#39;{
+    &quot;article&quot;: {
+        &quot;title&quot;: &quot;Minus alias provident deleniti sed eum id temporibus.&quot;,
+        &quot;description&quot;: &quot;Aut dolor rerum quia debitis qui et non nobis ut veniam.&quot;,
+        &quot;body&quot;: &quot;Quia molestiae ut magni eos. Laborum et ratione odit. Qui quam aspernatur. Dolorem esse impedit vel amet fugit et. Labore explicabo est ut. Libero quisquam aut non dolores voluptate. Nihil ratione porro eos numquam. Impedit voluptas et dolorum quis sit. Officia perspiciatis eum quis. Excepturi reprehenderit deleniti in consequuntur qui autem.&quot;,
+        &quot;tagList&quot;: [
+            &quot;#exercitationem112583808608&quot;,
+            &quot;#reprehenderit112585744456&quot;
+        ]
+    }
+}&#39;
+</div>
