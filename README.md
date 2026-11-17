@@ -2,7 +2,7 @@
 
 Гибридный сквозной фреймворк автоматизации тестирования веб-платформы **Conduit (RealWorld)**. Проект объединяет в одном репозитории контрактное тестирование REST API, браузерные UI-сценарии и прямую валидацию состояния реляционной базы данных.
 
- **[Открыть актуальный интерактивный отчёт Allure (GitHub Pages)]([https://github.io](https://semyoonova.github.io/aqa-java/))**
+ **[Открыть актуальный интерактивный отчёт Allure (GitHub Pages)]([https://github.io](https://semyoonova.github.io/aqa-java/)**
 
 ---
 
