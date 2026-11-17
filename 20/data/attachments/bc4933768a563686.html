@@ -1,0 +1,41 @@
+<div>POST to http://localhost:8080/articles</div>
+
+<h4>Body</h4>
+<div>
+    <pre class="preformated-text">
+{
+    &quot;article&quot;: {
+        &quot;title&quot;: &quot;Iure nihil doloribus iusto quos placeat atque.&quot;,
+        &quot;description&quot;: &quot;Aut iure quod quos tempora non corrupti rem possimus ducimus.&quot;,
+        &quot;body&quot;: &quot;Nostrum quia neque ea. Quia explicabo est rem repudiandae exercitationem voluptas. Laudantium est qui earum. Qui a ipsam ipsa vitae. Alias quis vitae minus recusandae qui rerum. Aperiam itaque corporis quia deleniti. Qui dolorem et porro qui reiciendis. Maxime atque ad. A repellat dolores. Sequi quia quidem deleniti. Voluptas sed culpa quis tempora in qui. Voluptatem aliquam dignissimos ut culpa.&quot;,
+        &quot;tagList&quot;: [
+            &quot;#et178037537671&quot;,
+            &quot;#doloribus178037504931&quot;
+        ]
+    }
+}    </pre>
+</div>
+
+<h4>Headers</h4>
+<div>
+        <div>Authorization: Token eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmYTI2YzcwNy1iOWU4LTQxYjYtYWEwYi00NGE1ZDJmYjdhMzciLCJleHAiOjE3OTUwMjUwMDl9.qdjP2Hi5jeyFkf2RpUy-7aVzgAKZfsmBMeq7LQQNpSuRsQfe8ZU75jhs5GQzHXPtP83YM_0gtTPlM-6LE7L1Jw</div>
+        <div>Accept: */*</div>
+        <div>Content-Type: application/json</div>
+</div>
+
+
+
+<h4>Curl</h4>
+<div>
+curl -v -X POST &#39;http://localhost:8080/articles&#39; -H &#39;Authorization: Token eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmYTI2YzcwNy1iOWU4LTQxYjYtYWEwYi00NGE1ZDJmYjdhMzciLCJleHAiOjE3OTUwMjUwMDl9.qdjP2Hi5jeyFkf2RpUy-7aVzgAKZfsmBMeq7LQQNpSuRsQfe8ZU75jhs5GQzHXPtP83YM_0gtTPlM-6LE7L1Jw&#39; -H &#39;Accept: */*&#39; -H &#39;Content-Type: application/json&#39; -d &#39;{
+    &quot;article&quot;: {
+        &quot;title&quot;: &quot;Iure nihil doloribus iusto quos placeat atque.&quot;,
+        &quot;description&quot;: &quot;Aut iure quod quos tempora non corrupti rem possimus ducimus.&quot;,
+        &quot;body&quot;: &quot;Nostrum quia neque ea. Quia explicabo est rem repudiandae exercitationem voluptas. Laudantium est qui earum. Qui a ipsam ipsa vitae. Alias quis vitae minus recusandae qui rerum. Aperiam itaque corporis quia deleniti. Qui dolorem et porro qui reiciendis. Maxime atque ad. A repellat dolores. Sequi quia quidem deleniti. Voluptas sed culpa quis tempora in qui. Voluptatem aliquam dignissimos ut culpa.&quot;,
+        &quot;tagList&quot;: [
+            &quot;#et178037537671&quot;,
+            &quot;#doloribus178037504931&quot;
+        ]
+    }
+}&#39;
+</div>
