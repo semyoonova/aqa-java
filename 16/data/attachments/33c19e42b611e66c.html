@@ -1,0 +1,41 @@
+<div>POST to http://localhost:8080/articles</div>
+
+<h4>Body</h4>
+<div>
+    <pre class="preformated-text">
+{
+    &quot;article&quot;: {
+        &quot;title&quot;: &quot;Quis provident non ullam enim molestias dolorem et et cupiditate.&quot;,
+        &quot;description&quot;: &quot;Facere magni animi natus dicta eaque rerum aliquid et nemo.&quot;,
+        &quot;body&quot;: &quot;Est dolorum fugiat. Impedit enim et est voluptatum molestiae. Amet ea id ipsum quo animi dolore quaerat. Sed natus sed dolorem occaecati. Sed omnis est sapiente voluptatem modi maxime accusantium. Dolor repudiandae ratione rerum. Qui molestiae iusto culpa magni repellendus. Nobis mollitia aut. Explicabo veritatis veritatis fuga consequuntur aspernatur. Non et velit. Repudiandae voluptatibus quia. Est beatae ipsum asperiores aut eligendi.&quot;,
+        &quot;tagList&quot;: [
+            &quot;#recusandae114066116209&quot;,
+            &quot;#tempore114067505491&quot;
+        ]
+    }
+}    </pre>
+</div>
+
+<h4>Headers</h4>
+<div>
+        <div>Authorization: Token eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI1YTdkOTM1NC1hZmM4LTRhMzItYWY5Zi0xYjZmODEwYWM2MTUiLCJleHAiOjE3OTUwMDg3NTF9.X62e6R-i_kM6WfXZhkqWYHpOTp4RhBHqqFQ4pM5jgd8o-PkaI58m9v8_z6CAmOyMrLMytpmJ1diZm66h3Rw1tg</div>
+        <div>Accept: */*</div>
+        <div>Content-Type: application/json</div>
+</div>
+
+
+
+<h4>Curl</h4>
+<div>
+curl -v -X POST &#39;http://localhost:8080/articles&#39; -H &#39;Authorization: Token eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI1YTdkOTM1NC1hZmM4LTRhMzItYWY5Zi0xYjZmODEwYWM2MTUiLCJleHAiOjE3OTUwMDg3NTF9.X62e6R-i_kM6WfXZhkqWYHpOTp4RhBHqqFQ4pM5jgd8o-PkaI58m9v8_z6CAmOyMrLMytpmJ1diZm66h3Rw1tg&#39; -H &#39;Accept: */*&#39; -H &#39;Content-Type: application/json&#39; -d &#39;{
+    &quot;article&quot;: {
+        &quot;title&quot;: &quot;Quis provident non ullam enim molestias dolorem et et cupiditate.&quot;,
+        &quot;description&quot;: &quot;Facere magni animi natus dicta eaque rerum aliquid et nemo.&quot;,
+        &quot;body&quot;: &quot;Est dolorum fugiat. Impedit enim et est voluptatum molestiae. Amet ea id ipsum quo animi dolore quaerat. Sed natus sed dolorem occaecati. Sed omnis est sapiente voluptatem modi maxime accusantium. Dolor repudiandae ratione rerum. Qui molestiae iusto culpa magni repellendus. Nobis mollitia aut. Explicabo veritatis veritatis fuga consequuntur aspernatur. Non et velit. Repudiandae voluptatibus quia. Est beatae ipsum asperiores aut eligendi.&quot;,
+        &quot;tagList&quot;: [
+            &quot;#recusandae114066116209&quot;,
+            &quot;#tempore114067505491&quot;
+        ]
+    }
+}&#39;
+</div>

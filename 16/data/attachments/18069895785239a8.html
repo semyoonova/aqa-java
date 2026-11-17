@@ -1,0 +1,41 @@
+<div>POST to http://localhost:8080/articles</div>
+
+<h4>Body</h4>
+<div>
+    <pre class="preformated-text">
+{
+    &quot;article&quot;: {
+        &quot;title&quot;: &quot;Sed et harum maiores atque debitis blanditiis tempora placeat.&quot;,
+        &quot;description&quot;: &quot;Sed qui quibusdam enim nostrum aut at tempora quia ut consequatur.&quot;,
+        &quot;body&quot;: &quot;Et nulla aut quas magni. Reprehenderit ullam aliquid sit adipisci est nobis consequuntur. Expedita perferendis sint et temporibus fugit soluta. Aut accusantium aut culpa. Rerum neque alias. Et voluptatem voluptates commodi inventore sit animi et. Minus veniam consequatur fugiat vero cupiditate at. Sapiente eos recusandae. Architecto voluptas eligendi. Dolorum excepturi enim. Quis dicta ipsa cum.&quot;,
+        &quot;tagList&quot;: [
+            &quot;#neque114224973560&quot;,
+            &quot;#occaecati114224992268&quot;
+        ]
+    }
+}    </pre>
+</div>
+
+<h4>Headers</h4>
+<div>
+        <div>Authorization: Token eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkYjc2ZTRmMS04YTE0LTRkMWQtYTg1NC1mOWM2ZTViMmJlOTYiLCJleHAiOjE3OTUwMDg3NTF9.UXbuqnhwoXfJeOBC8baz6YnCcW2Sxja-BYefuUrYTyRWx-eWyDdq9Xz9MVA-Avt2FWrt7C5toYMY8WNVVhKN-A</div>
+        <div>Accept: */*</div>
+        <div>Content-Type: application/json</div>
+</div>
+
+
+
+<h4>Curl</h4>
+<div>
+curl -v -X POST &#39;http://localhost:8080/articles&#39; -H &#39;Authorization: Token eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkYjc2ZTRmMS04YTE0LTRkMWQtYTg1NC1mOWM2ZTViMmJlOTYiLCJleHAiOjE3OTUwMDg3NTF9.UXbuqnhwoXfJeOBC8baz6YnCcW2Sxja-BYefuUrYTyRWx-eWyDdq9Xz9MVA-Avt2FWrt7C5toYMY8WNVVhKN-A&#39; -H &#39;Accept: */*&#39; -H &#39;Content-Type: application/json&#39; -d &#39;{
+    &quot;article&quot;: {
+        &quot;title&quot;: &quot;Sed et harum maiores atque debitis blanditiis tempora placeat.&quot;,
+        &quot;description&quot;: &quot;Sed qui quibusdam enim nostrum aut at tempora quia ut consequatur.&quot;,
+        &quot;body&quot;: &quot;Et nulla aut quas magni. Reprehenderit ullam aliquid sit adipisci est nobis consequuntur. Expedita perferendis sint et temporibus fugit soluta. Aut accusantium aut culpa. Rerum neque alias. Et voluptatem voluptates commodi inventore sit animi et. Minus veniam consequatur fugiat vero cupiditate at. Sapiente eos recusandae. Architecto voluptas eligendi. Dolorum excepturi enim. Quis dicta ipsa cum.&quot;,
+        &quot;tagList&quot;: [
+            &quot;#neque114224973560&quot;,
+            &quot;#occaecati114224992268&quot;
+        ]
+    }
+}&#39;
+</div>

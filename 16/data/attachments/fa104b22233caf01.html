@@ -1,0 +1,41 @@
+<div>POST to http://localhost:8080/articles</div>
+
+<h4>Body</h4>
+<div>
+    <pre class="preformated-text">
+{
+    &quot;article&quot;: {
+        &quot;title&quot;: &quot;Amet dolor totam aut ut enim.&quot;,
+        &quot;description&quot;: &quot;Ut id dolore perspiciatis asperiores vel qui libero sed sequi totam fugiat molestias maxime.&quot;,
+        &quot;body&quot;: &quot;Rem qui ad porro. Illo laudantium et laboriosam rerum qui laborum ea. Provident quos omnis. Voluptates minima praesentium quia et sint molestiae. Voluptate aspernatur quidem dolorem ut saepe perferendis voluptas. Nihil nam a. Omnis quod quos ipsum incidunt esse maiores repudiandae. Velit sunt ut non consequatur omnis. Molestiae temporibus culpa nostrum ea occaecati qui. Quis adipisci nulla amet quo sit nulla a. At natus repellat nihil quis et est.&quot;,
+        &quot;tagList&quot;: [
+            &quot;#omnis114592665574&quot;,
+            &quot;#aut114592684783&quot;
+        ]
+    }
+}    </pre>
+</div>
+
+<h4>Headers</h4>
+<div>
+        <div>Authorization: Token eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkNzU0MzljZi05ODU3LTQ4MzAtYmQ4OS03ZmIzYTJlYTM5MjAiLCJleHAiOjE3OTUwMDg3NTJ9.7yPxnG7A6l4vptqocEgVgcmVgCDvcsm2YTreJaK8XCDR6AB-gwy3ZllhIQs66fYBwTHIcrEZz75X6EwPKXsc-Q</div>
+        <div>Accept: */*</div>
+        <div>Content-Type: application/json</div>
+</div>
+
+
+
+<h4>Curl</h4>
+<div>
+curl -v -X POST &#39;http://localhost:8080/articles&#39; -H &#39;Authorization: Token eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkNzU0MzljZi05ODU3LTQ4MzAtYmQ4OS03ZmIzYTJlYTM5MjAiLCJleHAiOjE3OTUwMDg3NTJ9.7yPxnG7A6l4vptqocEgVgcmVgCDvcsm2YTreJaK8XCDR6AB-gwy3ZllhIQs66fYBwTHIcrEZz75X6EwPKXsc-Q&#39; -H &#39;Accept: */*&#39; -H &#39;Content-Type: application/json&#39; -d &#39;{
+    &quot;article&quot;: {
+        &quot;title&quot;: &quot;Amet dolor totam aut ut enim.&quot;,
+        &quot;description&quot;: &quot;Ut id dolore perspiciatis asperiores vel qui libero sed sequi totam fugiat molestias maxime.&quot;,
+        &quot;body&quot;: &quot;Rem qui ad porro. Illo laudantium et laboriosam rerum qui laborum ea. Provident quos omnis. Voluptates minima praesentium quia et sint molestiae. Voluptate aspernatur quidem dolorem ut saepe perferendis voluptas. Nihil nam a. Omnis quod quos ipsum incidunt esse maiores repudiandae. Velit sunt ut non consequatur omnis. Molestiae temporibus culpa nostrum ea occaecati qui. Quis adipisci nulla amet quo sit nulla a. At natus repellat nihil quis et est.&quot;,
+        &quot;tagList&quot;: [
+            &quot;#omnis114592665574&quot;,
+            &quot;#aut114592684783&quot;
+        ]
+    }
+}&#39;
+</div>
