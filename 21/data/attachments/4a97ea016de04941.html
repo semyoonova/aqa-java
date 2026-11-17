@@ -1,0 +1,41 @@
+<div>POST to http://localhost:8080/articles</div>
+
+<h4>Body</h4>
+<div>
+    <pre class="preformated-text">
+{
+    &quot;article&quot;: {
+        &quot;title&quot;: &quot;Unde quam qui tenetur voluptas non molestiae quas quia.&quot;,
+        &quot;description&quot;: &quot;Et accusantium sapiente voluptatem neque occaecati quod cupiditate et deleniti minus a natus quibusdam.&quot;,
+        &quot;body&quot;: &quot;Voluptatem ad voluptatem aut quasi quisquam sit et. Qui ut quis odio. Fugit delectus rerum atque quo ex qui. Debitis voluptates vel expedita quod tempora. Molestiae illum temporibus fugit commodi illum sint. Consequatur sunt fugit. Perspiciatis hic culpa cum dolor maiores ad. Dolores iure facere architecto est necessitatibus autem iusto. Quis quod deserunt. Molestiae reiciendis non dignissimos voluptas porro asperiores. Voluptas et saepe. Id at id.&quot;,
+        &quot;tagList&quot;: [
+            &quot;#qui301690220653&quot;,
+            &quot;#ipsam301690198089&quot;
+        ]
+    }
+}    </pre>
+</div>
+
+<h4>Headers</h4>
+<div>
+        <div>Authorization: Token eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5NmZkZGZlNi1hYWVlLTQ3OGUtYmY4OC1mMmE2ZGRjYzIyN2YiLCJleHAiOjE3OTUwMjUwMzN9.84UgJIURtWRR2e8HeGETpSBndAs87nW0ZnhqRYF3HJvDnNqtpjVyK_Z4V58xWZ2RwJi_97KFqSusszHBP9aG-Q</div>
+        <div>Accept: */*</div>
+        <div>Content-Type: application/json</div>
+</div>
+
+
+
+<h4>Curl</h4>
+<div>
+curl -v -X POST &#39;http://localhost:8080/articles&#39; -H &#39;Authorization: Token eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5NmZkZGZlNi1hYWVlLTQ3OGUtYmY4OC1mMmE2ZGRjYzIyN2YiLCJleHAiOjE3OTUwMjUwMzN9.84UgJIURtWRR2e8HeGETpSBndAs87nW0ZnhqRYF3HJvDnNqtpjVyK_Z4V58xWZ2RwJi_97KFqSusszHBP9aG-Q&#39; -H &#39;Accept: */*&#39; -H &#39;Content-Type: application/json&#39; -d &#39;{
+    &quot;article&quot;: {
+        &quot;title&quot;: &quot;Unde quam qui tenetur voluptas non molestiae quas quia.&quot;,
+        &quot;description&quot;: &quot;Et accusantium sapiente voluptatem neque occaecati quod cupiditate et deleniti minus a natus quibusdam.&quot;,
+        &quot;body&quot;: &quot;Voluptatem ad voluptatem aut quasi quisquam sit et. Qui ut quis odio. Fugit delectus rerum atque quo ex qui. Debitis voluptates vel expedita quod tempora. Molestiae illum temporibus fugit commodi illum sint. Consequatur sunt fugit. Perspiciatis hic culpa cum dolor maiores ad. Dolores iure facere architecto est necessitatibus autem iusto. Quis quod deserunt. Molestiae reiciendis non dignissimos voluptas porro asperiores. Voluptas et saepe. Id at id.&quot;,
+        &quot;tagList&quot;: [
+            &quot;#qui301690220653&quot;,
+            &quot;#ipsam301690198089&quot;
+        ]
+    }
+}&#39;
+</div>

@@ -1,0 +1,41 @@
+<div>POST to http://localhost:8080/articles</div>
+
+<h4>Body</h4>
+<div>
+    <pre class="preformated-text">
+{
+    &quot;article&quot;: {
+        &quot;title&quot;: &quot;Odio illo sint eum quis est.&quot;,
+        &quot;description&quot;: &quot;Aut est qui velit quis omnis eveniet ad eum earum.&quot;,
+        &quot;body&quot;: &quot;Aut velit ipsum debitis eius esse. Architecto consequuntur sunt quis labore ad culpa sequi. Quo voluptas placeat. Rerum fugit aut labore veritatis. Temporibus dolores fuga dignissimos voluptatibus et aut. Assumenda aperiam est placeat ea. Quos repellat pariatur aliquid laboriosam iste. Iste molestiae beatae sit ratione. Facilis mollitia non repellendus. Ut voluptatem sunt quidem dolor libero. Eius sit omnis eos error. Asperiores id incidunt qui excepturi occaecati.&quot;,
+        &quot;tagList&quot;: [
+            &quot;#magni301044290398&quot;,
+            &quot;#est301042323701&quot;
+        ]
+    }
+}    </pre>
+</div>
+
+<h4>Headers</h4>
+<div>
+        <div>Authorization: Token eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzMmNiNjIwOS01OGYzLTQ1OGUtODQwNi1lMjViMWU5MzcwOGUiLCJleHAiOjE3OTUwMjUwMzJ9.KLbnDCjj_SDvOxL19yv7fyi2_UnYAt0GqgBFe5ytqwDjM7E0PfJG1ml_q0q-Zx2ePYH0Op1AbqD4Drf6EH0cnA</div>
+        <div>Accept: */*</div>
+        <div>Content-Type: application/json</div>
+</div>
+
+
+
+<h4>Curl</h4>
+<div>
+curl -v -X POST &#39;http://localhost:8080/articles&#39; -H &#39;Authorization: Token eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzMmNiNjIwOS01OGYzLTQ1OGUtODQwNi1lMjViMWU5MzcwOGUiLCJleHAiOjE3OTUwMjUwMzJ9.KLbnDCjj_SDvOxL19yv7fyi2_UnYAt0GqgBFe5ytqwDjM7E0PfJG1ml_q0q-Zx2ePYH0Op1AbqD4Drf6EH0cnA&#39; -H &#39;Accept: */*&#39; -H &#39;Content-Type: application/json&#39; -d &#39;{
+    &quot;article&quot;: {
+        &quot;title&quot;: &quot;Odio illo sint eum quis est.&quot;,
+        &quot;description&quot;: &quot;Aut est qui velit quis omnis eveniet ad eum earum.&quot;,
+        &quot;body&quot;: &quot;Aut velit ipsum debitis eius esse. Architecto consequuntur sunt quis labore ad culpa sequi. Quo voluptas placeat. Rerum fugit aut labore veritatis. Temporibus dolores fuga dignissimos voluptatibus et aut. Assumenda aperiam est placeat ea. Quos repellat pariatur aliquid laboriosam iste. Iste molestiae beatae sit ratione. Facilis mollitia non repellendus. Ut voluptatem sunt quidem dolor libero. Eius sit omnis eos error. Asperiores id incidunt qui excepturi occaecati.&quot;,
+        &quot;tagList&quot;: [
+            &quot;#magni301044290398&quot;,
+            &quot;#est301042323701&quot;
+        ]
+    }
+}&#39;
+</div>

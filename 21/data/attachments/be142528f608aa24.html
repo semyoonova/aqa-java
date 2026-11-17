@@ -1,0 +1,41 @@
+<div>POST to http://localhost:8080/articles</div>
+
+<h4>Body</h4>
+<div>
+    <pre class="preformated-text">
+{
+    &quot;article&quot;: {
+        &quot;title&quot;: &quot;Esse consequuntur dolor suscipit explicabo dolorem et id corporis cum.&quot;,
+        &quot;description&quot;: &quot;Optio officia inventore minima voluptate dolor neque reiciendis necessitatibus nihil velit quasi.&quot;,
+        &quot;body&quot;: &quot;Est enim dolor. Sed rem delectus dicta. Consequuntur perspiciatis quis. Est recusandae ipsum id magnam. Sapiente illo hic earum autem blanditiis. Non enim qui unde dolorum molestias tempora qui. Eaque quod voluptas rerum facere velit sed voluptatem. Pariatur pariatur provident sint ipsam. Sed ducimus nemo recusandae est eos labore sunt. Voluptatum repellendus veniam nam. Nihil labore veritatis saepe rerum sunt. Sunt atque expedita modi dicta sapiente ut blanditiis.&quot;,
+        &quot;tagList&quot;: [
+            &quot;#totam301250709523&quot;,
+            &quot;#harum301250688512&quot;
+        ]
+    }
+}    </pre>
+</div>
+
+<h4>Headers</h4>
+<div>
+        <div>Authorization: Token eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI1NmY3MzAwOS0zNTljLTRiMmYtYmE5MC1kMmQ1NzFlNDdlNGIiLCJleHAiOjE3OTUwMjUwMzJ9.5DhlrYI9bdNbgEoP_WceDfenzAkjY5ar_ARY3-Ri2OoD8Xm6lKYUaSOiguaIAq4qudFpbgPaNUo24e9KYytJiA</div>
+        <div>Accept: */*</div>
+        <div>Content-Type: application/json</div>
+</div>
+
+
+
+<h4>Curl</h4>
+<div>
+curl -v -X POST &#39;http://localhost:8080/articles&#39; -H &#39;Authorization: Token eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI1NmY3MzAwOS0zNTljLTRiMmYtYmE5MC1kMmQ1NzFlNDdlNGIiLCJleHAiOjE3OTUwMjUwMzJ9.5DhlrYI9bdNbgEoP_WceDfenzAkjY5ar_ARY3-Ri2OoD8Xm6lKYUaSOiguaIAq4qudFpbgPaNUo24e9KYytJiA&#39; -H &#39;Accept: */*&#39; -H &#39;Content-Type: application/json&#39; -d &#39;{
+    &quot;article&quot;: {
+        &quot;title&quot;: &quot;Esse consequuntur dolor suscipit explicabo dolorem et id corporis cum.&quot;,
+        &quot;description&quot;: &quot;Optio officia inventore minima voluptate dolor neque reiciendis necessitatibus nihil velit quasi.&quot;,
+        &quot;body&quot;: &quot;Est enim dolor. Sed rem delectus dicta. Consequuntur perspiciatis quis. Est recusandae ipsum id magnam. Sapiente illo hic earum autem blanditiis. Non enim qui unde dolorum molestias tempora qui. Eaque quod voluptas rerum facere velit sed voluptatem. Pariatur pariatur provident sint ipsam. Sed ducimus nemo recusandae est eos labore sunt. Voluptatum repellendus veniam nam. Nihil labore veritatis saepe rerum sunt. Sunt atque expedita modi dicta sapiente ut blanditiis.&quot;,
+        &quot;tagList&quot;: [
+            &quot;#totam301250709523&quot;,
+            &quot;#harum301250688512&quot;
+        ]
+    }
+}&#39;
+</div>
