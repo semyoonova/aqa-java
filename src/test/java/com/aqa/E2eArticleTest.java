@@ -9,7 +9,6 @@ import org.junit.jupiter.api.Test;
 import com.aqa.utils.DbHelper;
 import com.aqa.utils.TestDataGenerator;
 
-import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 
 import com.aqa.api.clients.ArticleClient;
@@ -63,7 +62,7 @@ public class E2eArticleTest extends BaseTest{
     }
 
     @Test
-    @Description("API + БД: Зарегистрированный пользователь и публикация должны попасть в БД")
+    @DisplayName("API + БД: Зарегистрированный пользователь и публикация должны попасть в БД")
     public void registeredUserAndCreatedArticleShouldBeInsertedIntoDB() throws IOException {
         var userClient = new UserClient();
         var articleClient = new ArticleClient();

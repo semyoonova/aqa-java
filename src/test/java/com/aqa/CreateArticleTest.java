@@ -1,5 +1,6 @@
 package com.aqa;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import com.aqa.api.clients.ArticleClient;
@@ -7,9 +8,10 @@ import com.aqa.api.clients.UserClient;
 import com.aqa.api.models.UserLoginDto;
 import com.aqa.utils.TestDataGenerator;
 
-import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
 import io.qameta.allure.Story;
 
+@Epic("Создание публикации")
 public class CreateArticleTest extends BaseTest {
     
     private String token;
@@ -37,7 +39,7 @@ public class CreateArticleTest extends BaseTest {
 
     @Test
     @Story("Успешное создание публикации")
-    @Description("Проверка того, что авторизованный пользователь может создать публикацию")
+    @DisplayName("Проверка того, что авторизованный пользователь может создать публикацию")
     public void userCanCreateArticleSuccessfully() {
         var articleBody = TestDataGenerator.generateRandomArticle();
 

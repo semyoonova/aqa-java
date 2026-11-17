@@ -2,6 +2,7 @@ package com.aqa;
 
 import java.util.stream.Stream;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -12,7 +13,6 @@ import com.aqa.api.models.UserRegisterDto;
 import com.aqa.utils.TestDataGenerator;
 import org.hamcrest.Matchers;
 
-import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
@@ -23,7 +23,7 @@ public class RegisterTest extends BaseTest {
     
     @Test
     @Story("Успешная регистрация")
-    @Description("Проверка того, что пользователь может успешно зарегистрироваться с валидными данными")
+    @DisplayName("Проверка того, что пользователь может успешно зарегистрироваться с валидными данными")
     public void registerUserShouldReturnCode201() {
         var client = new UserClient();
         client.register(TestDataGenerator.generateRandomUser())
@@ -34,7 +34,7 @@ public class RegisterTest extends BaseTest {
 
     @Test
     @Story("Негативные сценарии регистрации")
-    @Description("Проверка повторной регистрации")
+    @DisplayName("Проверка повторной регистрации")
     public void registerDublicateUserShouldFail() {
         var user = TestDataGenerator.generateRandomUser();
         var client = new UserClient();
@@ -52,7 +52,7 @@ public class RegisterTest extends BaseTest {
     @ParameterizedTest(name = "Регистрация должна падать, если {0}")
     @MethodSource("getInvalidUsers")
     @Story("Негативные сценарии регистрации")
-    @Description("Проверка валидации полей при регистрации с пустыми данными")
+    @DisplayName("Проверка валидации полей при регистрации с пустыми данными")
     public void registerUserWithEmptyFieldShouldFail(String testName, UserRegisterDto invalidUser, String errorField, String expectedError) {
         var client = new UserClient();
         client.register(invalidUser)

@@ -1,6 +1,10 @@
 package com.aqa;
 
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.logevents.SelenideLogger;
+
+import io.qameta.allure.selenide.AllureSelenide;
+import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.RestAssured;
 import org.junit.jupiter.api.BeforeAll;
 import static com.aqa.utils.AppConfig.CONFIG;
