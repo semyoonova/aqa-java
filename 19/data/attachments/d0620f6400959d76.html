@@ -1,0 +1,41 @@
+<div>POST to http://localhost:8080/articles</div>
+
+<h4>Body</h4>
+<div>
+    <pre class="preformated-text">
+{
+    &quot;article&quot;: {
+        &quot;title&quot;: &quot;Ut fuga dicta a minima voluptas.&quot;,
+        &quot;description&quot;: &quot;Harum maxime veritatis ut recusandae vero odio explicabo maxime inventore qui.&quot;,
+        &quot;body&quot;: &quot;Molestiae molestiae quia ab. Aut dolore vel. Aut in consequatur porro. Consequatur amet molestias est temporibus. Vero suscipit est laudantium modi sed. Est autem sit veniam optio expedita eos itaque. Illum et quis earum at mollitia. Iusto exercitationem vel. Et deserunt perferendis perferendis deserunt voluptatibus. Perferendis quo exercitationem rem omnis. Dolorum molestiae voluptatem et et consequatur temporibus.&quot;,
+        &quot;tagList&quot;: [
+            &quot;#aut325257571481&quot;,
+            &quot;#sapiente325257596642&quot;
+        ]
+    }
+}    </pre>
+</div>
+
+<h4>Headers</h4>
+<div>
+        <div>Authorization: Token eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxNjU4MGI4MS0wMmQzLTQ4YjEtYTNlYS05ZWU2N2U2MGVjMWUiLCJleHAiOjE3OTUwMjQ5NjZ9.NrUyn2Jp3teYRKooVB9WUFzr5B_74uuHrUm46KUpZ6OJxARodNdPQIueNJ3MMww3CdrsQFtVPmBVC4zXma-NnQ</div>
+        <div>Accept: */*</div>
+        <div>Content-Type: application/json</div>
+</div>
+
+
+
+<h4>Curl</h4>
+<div>
+curl -v -X POST &#39;http://localhost:8080/articles&#39; -H &#39;Authorization: Token eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxNjU4MGI4MS0wMmQzLTQ4YjEtYTNlYS05ZWU2N2U2MGVjMWUiLCJleHAiOjE3OTUwMjQ5NjZ9.NrUyn2Jp3teYRKooVB9WUFzr5B_74uuHrUm46KUpZ6OJxARodNdPQIueNJ3MMww3CdrsQFtVPmBVC4zXma-NnQ&#39; -H &#39;Accept: */*&#39; -H &#39;Content-Type: application/json&#39; -d &#39;{
+    &quot;article&quot;: {
+        &quot;title&quot;: &quot;Ut fuga dicta a minima voluptas.&quot;,
+        &quot;description&quot;: &quot;Harum maxime veritatis ut recusandae vero odio explicabo maxime inventore qui.&quot;,
+        &quot;body&quot;: &quot;Molestiae molestiae quia ab. Aut dolore vel. Aut in consequatur porro. Consequatur amet molestias est temporibus. Vero suscipit est laudantium modi sed. Est autem sit veniam optio expedita eos itaque. Illum et quis earum at mollitia. Iusto exercitationem vel. Et deserunt perferendis perferendis deserunt voluptatibus. Perferendis quo exercitationem rem omnis. Dolorum molestiae voluptatem et et consequatur temporibus.&quot;,
+        &quot;tagList&quot;: [
+            &quot;#aut325257571481&quot;,
+            &quot;#sapiente325257596642&quot;
+        ]
+    }
+}&#39;
+</div>

@@ -1,0 +1,41 @@
+<div>POST to http://localhost:8080/articles</div>
+
+<h4>Body</h4>
+<div>
+    <pre class="preformated-text">
+{
+    &quot;article&quot;: {
+        &quot;title&quot;: &quot;Dolore iusto ab placeat repellat quod voluptates qui maiores aut.&quot;,
+        &quot;description&quot;: &quot;Placeat dolorum et vel architecto quaerat et nulla eius natus molestias quia.&quot;,
+        &quot;body&quot;: &quot;Est tempora et quam adipisci eligendi. Repellendus impedit occaecati repellendus aut. Modi nihil enim et. Repellat ut ratione ipsam. Aliquid et sunt. Sit hic magnam reiciendis sequi harum veritatis enim. Eveniet dolores quo eos odit totam tenetur nesciunt. Sit doloribus et eos cum aut nemo. Fugit placeat incidunt voluptas esse. Praesentium libero voluptate. Fugit molestiae vel doloribus.&quot;,
+        &quot;tagList&quot;: [
+            &quot;#inventore324981186237&quot;,
+            &quot;#at324981211538&quot;
+        ]
+    }
+}    </pre>
+</div>
+
+<h4>Headers</h4>
+<div>
+        <div>Authorization: Token eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJlYjQwZTBhZS0yOGIyLTRlMTctODc1My0xOWI1NmJhOGU0MTAiLCJleHAiOjE3OTUwMjQ5NjV9.m6oJUQjHu5t3S3mePYr28r26o6q9zwPp7d6jMnUJRTBf-gW2iu0vJ4HapugmHxFvwxjhyr-K7FnJaVcV-JtOlA</div>
+        <div>Accept: */*</div>
+        <div>Content-Type: application/json</div>
+</div>
+
+
+
+<h4>Curl</h4>
+<div>
+curl -v -X POST &#39;http://localhost:8080/articles&#39; -H &#39;Authorization: Token eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJlYjQwZTBhZS0yOGIyLTRlMTctODc1My0xOWI1NmJhOGU0MTAiLCJleHAiOjE3OTUwMjQ5NjV9.m6oJUQjHu5t3S3mePYr28r26o6q9zwPp7d6jMnUJRTBf-gW2iu0vJ4HapugmHxFvwxjhyr-K7FnJaVcV-JtOlA&#39; -H &#39;Accept: */*&#39; -H &#39;Content-Type: application/json&#39; -d &#39;{
+    &quot;article&quot;: {
+        &quot;title&quot;: &quot;Dolore iusto ab placeat repellat quod voluptates qui maiores aut.&quot;,
+        &quot;description&quot;: &quot;Placeat dolorum et vel architecto quaerat et nulla eius natus molestias quia.&quot;,
+        &quot;body&quot;: &quot;Est tempora et quam adipisci eligendi. Repellendus impedit occaecati repellendus aut. Modi nihil enim et. Repellat ut ratione ipsam. Aliquid et sunt. Sit hic magnam reiciendis sequi harum veritatis enim. Eveniet dolores quo eos odit totam tenetur nesciunt. Sit doloribus et eos cum aut nemo. Fugit placeat incidunt voluptas esse. Praesentium libero voluptate. Fugit molestiae vel doloribus.&quot;,
+        &quot;tagList&quot;: [
+            &quot;#inventore324981186237&quot;,
+            &quot;#at324981211538&quot;
+        ]
+    }
+}&#39;
+</div>

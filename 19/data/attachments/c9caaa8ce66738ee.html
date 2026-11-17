@@ -1,0 +1,41 @@
+<div>POST to http://localhost:8080/articles</div>
+
+<h4>Body</h4>
+<div>
+    <pre class="preformated-text">
+{
+    &quot;article&quot;: {
+        &quot;title&quot;: &quot;Perferendis illum magni illum occaecati eum.&quot;,
+        &quot;description&quot;: &quot;Voluptatem aperiam quas et aut omnis corrupti pariatur iure magnam rerum.&quot;,
+        &quot;body&quot;: &quot;Aut cumque hic natus ut. Deleniti et in ut. Tempore sit autem libero aut provident ullam ut. Est quaerat nemo. Et adipisci placeat libero modi. Labore debitis quia optio. Repellat saepe eius nemo iste ullam rem voluptatibus. Ipsum omnis minus voluptas aut. Ut quisquam non numquam similique quia dignissimos in. Perferendis temporibus magnam odit.&quot;,
+        &quot;tagList&quot;: [
+            &quot;#voluptate307145292234&quot;,
+            &quot;#dolorum307147480673&quot;
+        ]
+    }
+}    </pre>
+</div>
+
+<h4>Headers</h4>
+<div>
+        <div>Authorization: Token eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI1ZWIyNDZiMi0yYjE0LTRkZGItOGI4Zi1jNTEwNjJkYWVlNTkiLCJleHAiOjE3OTUwMjQ5NDd9._Cxi9sFjmQvXeNdy8aCMSsO629jR_gvMCVjh0euVIJLvmFmMfYKqSnE6RYrIZZkjO8_yjsIgFhNQ5J-RuszKNQ</div>
+        <div>Accept: */*</div>
+        <div>Content-Type: application/json</div>
+</div>
+
+
+
+<h4>Curl</h4>
+<div>
+curl -v -X POST &#39;http://localhost:8080/articles&#39; -H &#39;Authorization: Token eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI1ZWIyNDZiMi0yYjE0LTRkZGItOGI4Zi1jNTEwNjJkYWVlNTkiLCJleHAiOjE3OTUwMjQ5NDd9._Cxi9sFjmQvXeNdy8aCMSsO629jR_gvMCVjh0euVIJLvmFmMfYKqSnE6RYrIZZkjO8_yjsIgFhNQ5J-RuszKNQ&#39; -H &#39;Accept: */*&#39; -H &#39;Content-Type: application/json&#39; -d &#39;{
+    &quot;article&quot;: {
+        &quot;title&quot;: &quot;Perferendis illum magni illum occaecati eum.&quot;,
+        &quot;description&quot;: &quot;Voluptatem aperiam quas et aut omnis corrupti pariatur iure magnam rerum.&quot;,
+        &quot;body&quot;: &quot;Aut cumque hic natus ut. Deleniti et in ut. Tempore sit autem libero aut provident ullam ut. Est quaerat nemo. Et adipisci placeat libero modi. Labore debitis quia optio. Repellat saepe eius nemo iste ullam rem voluptatibus. Ipsum omnis minus voluptas aut. Ut quisquam non numquam similique quia dignissimos in. Perferendis temporibus magnam odit.&quot;,
+        &quot;tagList&quot;: [
+            &quot;#voluptate307145292234&quot;,
+            &quot;#dolorum307147480673&quot;
+        ]
+    }
+}&#39;
+</div>
