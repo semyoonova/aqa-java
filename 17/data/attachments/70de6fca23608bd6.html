@@ -1,0 +1,41 @@
+<div>POST to http://localhost:8080/articles</div>
+
+<h4>Body</h4>
+<div>
+    <pre class="preformated-text">
+{
+    &quot;article&quot;: {
+        &quot;title&quot;: &quot;Laudantium et consectetur aut optio ad voluptatum sunt.&quot;,
+        &quot;description&quot;: &quot;Voluptas id ut ullam velit quis dolor quidem consequatur nesciunt doloremque dolores voluptatem et.&quot;,
+        &quot;body&quot;: &quot;Sunt alias dolorem alias dolore voluptatibus. Amet dignissimos doloremque dolorem rem. Quia sunt voluptatem est soluta tempore quia ad. Et minus et ut alias sed perferendis. Omnis quod commodi deserunt architecto provident vel recusandae. Placeat sint quaerat quia in. Reiciendis fugiat accusantium excepturi. Qui et itaque. Vel accusamus corporis et. Aspernatur voluptas doloribus.&quot;,
+        &quot;tagList&quot;: [
+            &quot;#vel683106101796&quot;,
+            &quot;#magnam683107703827&quot;
+        ]
+    }
+}    </pre>
+</div>
+
+<h4>Headers</h4>
+<div>
+        <div>Authorization: Token eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMDBjZTQ5Ni02YjQyLTRiYmYtYTcyYi1hYTI3YzNmN2VlNzciLCJleHAiOjE3OTUwMDk0NTh9.gxDd43JFOCHGIpKLhU8kFE6nBSfxYtYt7VubyzOieuOorIzooB7Lku2vQx2iAcudP0Y484kMzpLC62GGpuaOQA</div>
+        <div>Accept: */*</div>
+        <div>Content-Type: application/json</div>
+</div>
+
+
+
+<h4>Curl</h4>
+<div>
+curl -v -X POST &#39;http://localhost:8080/articles&#39; -H &#39;Authorization: Token eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMDBjZTQ5Ni02YjQyLTRiYmYtYTcyYi1hYTI3YzNmN2VlNzciLCJleHAiOjE3OTUwMDk0NTh9.gxDd43JFOCHGIpKLhU8kFE6nBSfxYtYt7VubyzOieuOorIzooB7Lku2vQx2iAcudP0Y484kMzpLC62GGpuaOQA&#39; -H &#39;Accept: */*&#39; -H &#39;Content-Type: application/json&#39; -d &#39;{
+    &quot;article&quot;: {
+        &quot;title&quot;: &quot;Laudantium et consectetur aut optio ad voluptatum sunt.&quot;,
+        &quot;description&quot;: &quot;Voluptas id ut ullam velit quis dolor quidem consequatur nesciunt doloremque dolores voluptatem et.&quot;,
+        &quot;body&quot;: &quot;Sunt alias dolorem alias dolore voluptatibus. Amet dignissimos doloremque dolorem rem. Quia sunt voluptatem est soluta tempore quia ad. Et minus et ut alias sed perferendis. Omnis quod commodi deserunt architecto provident vel recusandae. Placeat sint quaerat quia in. Reiciendis fugiat accusantium excepturi. Qui et itaque. Vel accusamus corporis et. Aspernatur voluptas doloribus.&quot;,
+        &quot;tagList&quot;: [
+            &quot;#vel683106101796&quot;,
+            &quot;#magnam683107703827&quot;
+        ]
+    }
+}&#39;
+</div>

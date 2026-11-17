@@ -1,0 +1,41 @@
+<div>POST to http://localhost:8080/articles</div>
+
+<h4>Body</h4>
+<div>
+    <pre class="preformated-text">
+{
+    &quot;article&quot;: {
+        &quot;title&quot;: &quot;Minima fugit eum ex maxime qui.&quot;,
+        &quot;description&quot;: &quot;Unde numquam tempore molestias quia voluptas qui odit et natus qui impedit et.&quot;,
+        &quot;body&quot;: &quot;Cum recusandae accusamus nulla pariatur sapiente quas. Aut rerum vero sint aliquid mollitia quas at. Quibusdam provident et placeat voluptas. Maiores delectus sit dolorum. Consequuntur commodi vitae nobis sapiente. Ut reiciendis optio id illo sunt optio. Consectetur veniam aliquam omnis quasi ut tempora. Magnam perferendis ea illum corrupti quidem id beatae. Laboriosam expedita blanditiis. Voluptates minima magni laboriosam qui. Cumque maxime error et tenetur id nulla.&quot;,
+        &quot;tagList&quot;: [
+            &quot;#nihil697504180743&quot;,
+            &quot;#rerum697504206356&quot;
+        ]
+    }
+}    </pre>
+</div>
+
+<h4>Headers</h4>
+<div>
+        <div>Authorization: Token eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI4ZjJmOWZlYi1kYjE5LTRkNTItOTJiYi1hMDEzOGNjYmUyNDEiLCJleHAiOjE3OTUwMDk0NzN9.5TmaFoZAd4WVaBjrnckHuQhDzHVTNqj9J8ozYtnec7mUYNhB7C--0M0Ckp_0fznSLzSX5eYxvYcFnM3JkWyHJQ</div>
+        <div>Accept: */*</div>
+        <div>Content-Type: application/json</div>
+</div>
+
+
+
+<h4>Curl</h4>
+<div>
+curl -v -X POST &#39;http://localhost:8080/articles&#39; -H &#39;Authorization: Token eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI4ZjJmOWZlYi1kYjE5LTRkNTItOTJiYi1hMDEzOGNjYmUyNDEiLCJleHAiOjE3OTUwMDk0NzN9.5TmaFoZAd4WVaBjrnckHuQhDzHVTNqj9J8ozYtnec7mUYNhB7C--0M0Ckp_0fznSLzSX5eYxvYcFnM3JkWyHJQ&#39; -H &#39;Accept: */*&#39; -H &#39;Content-Type: application/json&#39; -d &#39;{
+    &quot;article&quot;: {
+        &quot;title&quot;: &quot;Minima fugit eum ex maxime qui.&quot;,
+        &quot;description&quot;: &quot;Unde numquam tempore molestias quia voluptas qui odit et natus qui impedit et.&quot;,
+        &quot;body&quot;: &quot;Cum recusandae accusamus nulla pariatur sapiente quas. Aut rerum vero sint aliquid mollitia quas at. Quibusdam provident et placeat voluptas. Maiores delectus sit dolorum. Consequuntur commodi vitae nobis sapiente. Ut reiciendis optio id illo sunt optio. Consectetur veniam aliquam omnis quasi ut tempora. Magnam perferendis ea illum corrupti quidem id beatae. Laboriosam expedita blanditiis. Voluptates minima magni laboriosam qui. Cumque maxime error et tenetur id nulla.&quot;,
+        &quot;tagList&quot;: [
+            &quot;#nihil697504180743&quot;,
+            &quot;#rerum697504206356&quot;
+        ]
+    }
+}&#39;
+</div>

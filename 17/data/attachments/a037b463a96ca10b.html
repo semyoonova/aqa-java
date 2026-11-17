@@ -1,0 +1,41 @@
+<div>POST to http://localhost:8080/articles</div>
+
+<h4>Body</h4>
+<div>
+    <pre class="preformated-text">
+{
+    &quot;article&quot;: {
+        &quot;title&quot;: &quot;Labore quia quia quae ea hic eos.&quot;,
+        &quot;description&quot;: &quot;Tempora molestiae reiciendis quo aut animi libero omnis eaque explicabo laudantium tempora qui.&quot;,
+        &quot;body&quot;: &quot;Voluptas ex cum earum rerum saepe. Vel sunt et harum praesentium illum accusamus natus. Occaecati ab possimus quasi autem asperiores fuga. Porro et optio est voluptatem consequatur. Dolores non voluptas dicta voluptatem neque. Minima ratione magni ut minima sunt doloribus. Ea pariatur repudiandae nobis alias omnis. Dolor facere est officia aut consequuntur laboriosam alias. Dolorem sunt unde suscipit dolorem est et. Ab dolorem nostrum odit. Laborum aspernatur sit possimus. Sunt ipsam id sunt est ut ut repellendus.&quot;,
+        &quot;tagList&quot;: [
+            &quot;#et697182417998&quot;,
+            &quot;#in697182442399&quot;
+        ]
+    }
+}    </pre>
+</div>
+
+<h4>Headers</h4>
+<div>
+        <div>Authorization: Token eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyYzY5NjUwMS0wZWQ2LTQwOWQtODc5ZC0xNGRhMDlkZGMxMWUiLCJleHAiOjE3OTUwMDk0NzN9.cyzQNNQyL3JO4OBctP_VsJOWi-IfT_ugvuxtTLmpXV2MtkMlZa8M6CVWR0LkJ3Xy4RNNzSuZjyQY7fOar-KIkQ</div>
+        <div>Accept: */*</div>
+        <div>Content-Type: application/json</div>
+</div>
+
+
+
+<h4>Curl</h4>
+<div>
+curl -v -X POST &#39;http://localhost:8080/articles&#39; -H &#39;Authorization: Token eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyYzY5NjUwMS0wZWQ2LTQwOWQtODc5ZC0xNGRhMDlkZGMxMWUiLCJleHAiOjE3OTUwMDk0NzN9.cyzQNNQyL3JO4OBctP_VsJOWi-IfT_ugvuxtTLmpXV2MtkMlZa8M6CVWR0LkJ3Xy4RNNzSuZjyQY7fOar-KIkQ&#39; -H &#39;Accept: */*&#39; -H &#39;Content-Type: application/json&#39; -d &#39;{
+    &quot;article&quot;: {
+        &quot;title&quot;: &quot;Labore quia quia quae ea hic eos.&quot;,
+        &quot;description&quot;: &quot;Tempora molestiae reiciendis quo aut animi libero omnis eaque explicabo laudantium tempora qui.&quot;,
+        &quot;body&quot;: &quot;Voluptas ex cum earum rerum saepe. Vel sunt et harum praesentium illum accusamus natus. Occaecati ab possimus quasi autem asperiores fuga. Porro et optio est voluptatem consequatur. Dolores non voluptas dicta voluptatem neque. Minima ratione magni ut minima sunt doloribus. Ea pariatur repudiandae nobis alias omnis. Dolor facere est officia aut consequuntur laboriosam alias. Dolorem sunt unde suscipit dolorem est et. Ab dolorem nostrum odit. Laborum aspernatur sit possimus. Sunt ipsam id sunt est ut ut repellendus.&quot;,
+        &quot;tagList&quot;: [
+            &quot;#et697182417998&quot;,
+            &quot;#in697182442399&quot;
+        ]
+    }
+}&#39;
+</div>
