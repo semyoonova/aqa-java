@@ -9,10 +9,14 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+
+import io.qameta.allure.Step;
+
 import static com.aqa.utils.AppConfig.CONFIG;
 
 public class DbHelper {
 
+    @Step("БД: Проверить наличие пользователя с email {0} в таблице users")
     public static boolean isUserExistsInDb(String email) {
         String sql = "SELECT COUNT(*) FROM users WHERE email = ?";
         try {
@@ -40,6 +44,7 @@ public class DbHelper {
         return false;
     }
 
+    @Step("БД: Проверить наличие публикации с заголовком {0} в таблице articles")
     public static boolean isArticleExistsInDb(String title) throws IOException {
         String sql = "SELECT COUNT(*) FROM articles WHERE title = ?";
         try {

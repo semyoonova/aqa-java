@@ -1,6 +1,9 @@
 package com.aqa.ui.pages;
 
 import com.codeborne.selenide.SelenideElement;
+
+import io.qameta.allure.Step;
+
 import static com.codeborne.selenide.Selenide.$;
 
 import com.codeborne.selenide.Condition;
@@ -14,6 +17,7 @@ public class LoginPage extends BasePage<LoginPage> {
     private final SelenideElement submitButton = $("button[type='submit']");
     private final SelenideElement errorList = $("app-list-errors");
 
+    @Step("UI: Авторизация пользователя {0}")
     public LoginPage login(String email, String password) {
         emailInput.setValue(email);
         passwordInput.setValue(password);
@@ -21,18 +25,21 @@ public class LoginPage extends BasePage<LoginPage> {
         return this;
     }
 
+    @Step("UI: Проверяем загрузку страницы")
     @Override
     public LoginPage isLoaded() {
         submitButton.shouldBe(Condition.visible);
         return this;
     }
 
+    @Step("UI: Открываем страницу с авторизацией")
     @Override
     public LoginPage open() {
         Selenide.open(PAGE_URL);
         return isLoaded();
     }
 
+    @Step("UI: Проверяем наличие сообщения с ошибкой")
     public LoginPage checkInvalidDataMessageIsVisible() {
         errorList.find(byText( "email or password is invalid")).shouldBe(Condition.visible);
         return this;

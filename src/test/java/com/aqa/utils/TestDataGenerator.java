@@ -1,19 +1,17 @@
 package com.aqa.utils;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 import com.aqa.api.models.CreateArticleDto;
 import com.aqa.api.models.UserRegisterDto;
 import com.github.javafaker.Faker;
 
+import io.qameta.allure.Step;
+
 public class TestDataGenerator {
     
     private static final Faker faker = new Faker();
     
+    @Step("Генерируем рандомного пользователя")
     public static UserRegisterDto generateRandomUser() {
         String username = faker.name().username(); 
         String email = faker.internet().emailAddress(); 
@@ -23,6 +21,7 @@ public class TestDataGenerator {
         return new UserRegisterDto(userFields);
     } 
 
+    @Step("Генерируем рандомную публикацию")
     public static CreateArticleDto generateRandomArticle() {
         Set<String> tags = Set.of(
             "#" + faker.lorem().word() + System.nanoTime(),

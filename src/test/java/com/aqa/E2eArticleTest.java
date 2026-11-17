@@ -3,10 +3,14 @@ package com.aqa;
 import java.io.IOException;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import com.aqa.utils.DbHelper;
 import com.aqa.utils.TestDataGenerator;
+
+import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
 
 import com.aqa.api.clients.ArticleClient;
 import com.aqa.api.clients.UserClient;
@@ -14,10 +18,12 @@ import com.aqa.api.models.CreateArticleDto;
 import com.aqa.api.models.UserLoginDto;
 import com.aqa.api.models.UserRegisterDto;
 
+@Epic("Сквозные тесты")
 public class E2eArticleTest extends BaseTest{
     
     @Test
-    public void createArticleAndGetById() {
+    @DisplayName("API: Созданная публикация должна быть получена при запросе")
+    public void createdArticleShouldBeReceivedById() {
         var userClient = new UserClient();
         var articleClient = new ArticleClient();
         UserRegisterDto user = TestDataGenerator.generateRandomUser();
@@ -57,6 +63,7 @@ public class E2eArticleTest extends BaseTest{
     }
 
     @Test
+    @Description("API + БД: Зарегистрированный пользователь и публикация должны попасть в БД")
     public void registeredUserAndCreatedArticleShouldBeInsertedIntoDB() throws IOException {
         var userClient = new UserClient();
         var articleClient = new ArticleClient();
@@ -88,6 +95,5 @@ public class E2eArticleTest extends BaseTest{
                 .getObject("articles[0]", CreateArticleDto.Article.class);
         
         Assertions.assertTrue(DbHelper.isArticleExistsInDb(article.getArticle().getTitle()));
-        
     }
 }

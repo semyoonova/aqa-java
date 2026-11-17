@@ -3,6 +3,7 @@ package com.aqa.api.clients;
 import com.aqa.api.models.UserLoginDto;
 import com.aqa.api.models.UserRegisterDto;
 
+import io.qameta.allure.Step;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import static io.restassured.RestAssured.given;
@@ -20,6 +21,7 @@ public class UserClient {
         this.baseUrl = baseUrl;
     }
     
+    @Step("API: Регистрируем нового пользователя")
     public Response register(UserRegisterDto userDto) {
         return given()
             .baseUri(baseUrl)
@@ -29,6 +31,7 @@ public class UserClient {
             .post("/users");
     }
 
+    @Step("API: Авторизовываем нового пользователя")
     public Response login(UserLoginDto loginDto) {
         return given()
             .baseUri(baseUrl)
@@ -38,6 +41,7 @@ public class UserClient {
             .post("/users/login");
     }
 
+    @Step("API: Получаем токен пользователя")
     public String getLoginToken(UserLoginDto loginDto) {
         return login(loginDto)
             .then()
